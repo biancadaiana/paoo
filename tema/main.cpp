@@ -73,7 +73,7 @@ int main()
     Doctor dr1("Wilson", 43, "Neurology");
     dr1.doWork();
 
-    Doctor dr2("Wilson", 39, "Cardiology");
+    Doctor dr2("Wiliams", 39, "Cardiology");
     dr2.doWork();
 
     // Doctor d2;
@@ -83,5 +83,7 @@ int main()
     // Teacher t2;
     // t2=teacher1;
     // t2.doWork();
+
+
     return 0;
 }

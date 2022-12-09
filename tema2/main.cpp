@@ -29,6 +29,7 @@ class Employee {
          Employee& operator = (const Employee& rhs){ 
                 if(this == &rhs)
                 {
+                    cout<<"Self asig"<<endl;
                     return *this;
                 }
                 name = rhs.name;
@@ -91,6 +92,7 @@ class Doctor : public Employee{
             
             Doctor& operator=(const Doctor& rhs){
                 Sallary *pt= sal;
+               
                 sal=new Sallary(*rhs.sal);
                 delete pt;
                 return *this;
@@ -123,11 +125,14 @@ int main()
     Employee e3;
     e3=e1;
     cout<<e3.getName()<<"  "<<e3.getAge()<<endl;
-    Employee e4=e1;
-    cout<<e4.getName()<<"  "<<e3.getAge()<<endl;
-
-
-
+    cout<<"------"<<endl;
+    Employee e4=e2=e1;
+    cout<<e4.getName()<<"  "<<e4.getAge()<<endl;
+    cout<<"------"<<endl;
+    e1=e1;
+    cout<<e1.getName()<<"  "<<e1.getAge()<<endl;
+    
+     
    
     return 0;
 }
